@@ -408,7 +408,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="半年总结"><a href="#半年总结" class="headerlink" title="半年总结"></a>半年总结</h3><p>去年12月12日，我离开了鄂尔多斯的沙漠-草原，</p>
+                <h1 id="半年总结"><a href="#半年总结" class="headerlink" title="半年总结"></a>半年总结</h1><p>去年12月12日，我离开了鄂尔多斯的沙漠-草原，</p>
 <p>到今天6月12日，刚好过去了半年。</p>
 <br/>
 
@@ -418,7 +418,7 @@
 <p>总的来说还是挺圆满的。</p>
  <br/>
 
-<h3 id="离职回顾"><a href="#离职回顾" class="headerlink" title="离职回顾"></a>离职回顾</h3><p>中石油的待遇挺好的，一个啥也不懂的应届本科生，开12k的工资，我觉得我都没创造什么经济效益。</p>
+<h1 id="离职回顾"><a href="#离职回顾" class="headerlink" title="离职回顾"></a>离职回顾</h1><p>中石油的待遇挺好的，一个啥也不懂的应届本科生，开12k的工资，我觉得我都没创造什么经济效益。</p>
 <p>在沙漠的日子是寂寞的，搞工程不仅要干杂活，还要学习写资料，我自己想做的事却没时间做了。</p>
 <br/>
 
@@ -445,7 +445,7 @@
 <p>3月30日，到上海了。</p>
 <br/>
 
-<h3 id="学习回顾"><a href="#学习回顾" class="headerlink" title="学习回顾"></a>学习回顾</h3><p>
+<h1 id="学习回顾"><a href="#学习回顾" class="headerlink" title="学习回顾"></a>学习回顾</h1><p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4月6号正式开始学习<b>java</b>，目前会一点<b>JavaSE</b>的基础，会JDBC的一点原理，会一点MyBatis，会一点<b>JavaWeb</b>的增删改查，数据库、数据结构、计算机网络的学习，其实还比较模糊。转行前并不知道 JAVA 到底有多卷，学习以后才发现，至少要学会Spring全家桶、微服务、分布式、中间件，才可能找得到工作。
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好歹是211院校毕业，才23岁（不到），应该或许可能大概......能卷赢吧？
@@ -754,8 +754,8 @@
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('2'),
-            headingSelector: 'h1, h2, h3, h4'
+            collapseDepth: Number('0'),
+            headingSelector: 'h1'
         });
 
         // modify the toc link href to support Chinese.
@@ -767,7 +767,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+        $('#articleContent').children('h1').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 

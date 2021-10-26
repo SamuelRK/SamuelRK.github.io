@@ -1231,7 +1231,7 @@ finalize()如果重写了这个方法，虚拟机在做垃圾回收的时候，�
 <p>生产环境对数据库进行修改操作要加事务，在spring中我们使用声明是事务，在方法上增加@Transactional注解，spring会通过动态代理，帮我们提交或者回滚操作</p>
 <h2 id="事务是为了保证什么？"><a href="#事务是为了保证什么？" class="headerlink" title="事务是为了保证什么？"></a>事务是为了保证什么？</h2><p>事务可以保证操作的原子性，从而保证数据的完整性。</p>
 <h2 id="同一个事务中是读已提交还是读未提交"><a href="#同一个事务中是读已提交还是读未提交" class="headerlink" title="同一个事务中是读已提交还是读未提交"></a>同一个事务中是读已提交还是读未提交</h2><p>读未提交</p>
-<h1 id="spring中的-Transactional声明性事务什么时候会失效"><a href="#spring中的-Transactional声明性事务什么时候会失效" class="headerlink" title="spring中的@Transactional声明性事务什么时候会失效"></a>spring中的@Transactional声明性事务什么时候会失效</h1><ul>
+<h2 id="spring中的-Transactional声明性事务什么时候会失效"><a href="#spring中的-Transactional声明性事务什么时候会失效" class="headerlink" title="spring中的@Transactional声明性事务什么时候会失效"></a>spring中的@Transactional声明性事务什么时候会失效</h2><ul>
 <li><p>同一类方法里面调用另一个方法</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Service</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OrderServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">OrderService</span> <span class="token punctuation">&#123;</span>
@@ -3495,7 +3495,7 @@ delete from tb_actor where actor_id in
 <li>软状态（Soft State）</li>
 <li>最终一致性（Eventually Consistent）</li>
 </ul>
-<h1 id="22-杂项"><a href="#22-杂项" class="headerlink" title="22.杂项"></a>22.杂项</h1><p><strong>1.雪花算法生成的主键是19位长整型，但是js只能处理16位长整型，最后三位会被截掉。解决方法是把19位整数变成字符串传给前端。</strong></p>
+<h1 id="23-杂项"><a href="#23-杂项" class="headerlink" title="23.杂项"></a>23.杂项</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p><strong>1.雪花算法生成的主键是19位长整型，但是js只能处理16位长整型，最后三位会被截掉。解决方法是把19位整数变成字符串传给前端。</strong></p>
 <p><img src="https://woniumd.oss-cn-hangzhou.aliyuncs.com/java/yangguang/20210427153251.png" alt="image-20210427153245969"></p>
 <p><img src="https://woniumd.oss-cn-hangzhou.aliyuncs.com/java/yangguang/20210427153355.png" alt="image-20210427153355196"></p>
 <p><strong>2.BigDecimal问题：</strong></p>
@@ -3862,8 +3862,8 @@ BigDecimal param2 &#x3D; new BigDecimal(0.2);<span aria-hidden="true" class="lin
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('2'),
-            headingSelector: 'h1, h2, h3, h4'
+            collapseDepth: Number('0'),
+            headingSelector: 'h1'
         });
 
         // modify the toc link href to support Chinese.
@@ -3875,7 +3875,7 @@ BigDecimal param2 &#x3D; new BigDecimal(0.2);<span aria-hidden="true" class="lin
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+        $('#articleContent').children('h1').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
